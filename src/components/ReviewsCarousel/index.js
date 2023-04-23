@@ -35,6 +35,7 @@ class ReviewsCarousel extends Component {
     const itemFunc = this.itemFunction(reviewsList)
     const {userName} = this.state
     const item = reviewsList.filter(eachItem => eachItem.username === userName)
+    const item1 = item[0]
     return (
       <div className="bg">
         <div className="bg1">
@@ -46,10 +47,10 @@ class ReviewsCarousel extends Component {
               onClick={this.leftArrowFunction}
             />
             <div className="bg3">
-              <img src={item.imgUrl} alt={item.username} className="im" />
-              <p>{item.username}</p>
-              <p className="p">{item.companyName}</p>
-              <p className="p">{item.description}</p>
+              <img src={item1.imgUrl} alt={item1.username} className="im" />
+              <p>{item1.username}</p>
+              <p className="p">{item1.companyName}</p>
+              <p className="p">{item1.description}</p>
             </div>
             <img
               src="https://assets.ccbp.in/frontend/react-js/right-arrow-img.png"
